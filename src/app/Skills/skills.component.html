@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-12-sm col-6"
+      *ngFor="let itemv of item.values; let i = index"
+    >
+    <strong>{{ itemv.name }}</strong>
+      <mat-progress-bar
+        class="tp-margin"
+        [color]="primary"
+        [mode]="determinate"
+        [value]="itemv.percentage"
+        [bufferValue]="bufferValue"
+      >
+      </mat-progress-bar>
+      {{ itemv.percentage }}
+    </div>
+  </div>
+</div>

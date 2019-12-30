@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row" *ngFor="let itemv of item.values; let i = index">
+    <mat-card class="tp-card">
+      <mat-card-header>
+        <mat-card-title>{{ itemv.name }} </mat-card-title>
+        <mat-card-subtitle>{{ itemv.company }} </mat-card-subtitle>
+      </mat-card-header>
+      <div class="el-divider">
+        <div class="el-divider-right-text">
+            <span *ngIf="itemv.startdate == 'c'"> Present</span>
+            <span *ngIf="itemv.startdate != 'c'">
+                 {{ itemv.startdate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY" }}
+                </span>
+            
+          -
+          <span *ngIf="itemv.enddate == 'c'"> Present</span>
+          <span *ngIf="itemv.startdate != 'c'">
+               {{ itemv.enddate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY" }}
+              </span>
+        </div>
+      </div>
+      <mat-card-content>
+        <p [innerHTML]="itemv.desc | sanitizeHtml"></p>
+      </mat-card-content>
+      <div *ngIf="itemv.values">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            RESPONSIBILITY
+          </mat-expansion-panel-header>
+
+          <ol>
+            <li *ngFor="let itemvx of itemv.values; let j = index">
+              {{ itemvx.name }}
+            </li>
+          </ol>
+        </mat-expansion-panel>
+      </div>
+      <div *ngIf="itemv.technology">
+        <mat-chip-list>
+          <mat-chip
+            color="primary"
+            *ngFor="let itemvxc of itemv.technology; let j = index"
+          >
+            {{ itemvxc }}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-card>
+    <br />
+  </div>
+</div>

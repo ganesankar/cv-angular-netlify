@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row " *ngFor="let itemv of list | keyvalue; let i = index">
+    <div class="col-sm-12">
+      {{ itemv.key }}
+      <ol>
+        <li *ngFor="let itemvx of itemv.value; let j = index">
+          {{ itemvx.name }}
+          <mat-chip-list>
+            <mat-chip
+              color="primary"
+              *ngFor="let itemvxc of itemvx.values; let j = index"
+            >
+              {{ itemvxc }}
+            </mat-chip>
+          </mat-chip-list>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

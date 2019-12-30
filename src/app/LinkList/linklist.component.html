@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="relative" *ngFor="let itemv of item.values; let i = index">
+    {{ itemv.name }}
+    <div class="el-divider">
+      <div class="el-divider-left-text">
+        <a
+          *ngIf="itemv.elink"
+          href="itemv.elink"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ itemv.elink }}
+        </a>
+        <a *ngIf="itemv.link" href="itemv.link" target="_blank" rel="noopener">
+          {{ itemv.link }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

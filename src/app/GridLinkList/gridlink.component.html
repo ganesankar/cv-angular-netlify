@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3" *ngFor="let itemv of item.values; let i = index">
+      {{ itemv.name }}
+      <p>
+        
+      </p>
+      <a *ngIf="itemv.link" href="itemv.link" target="_blank" rel="noopener">
+        {{ itemv.desc }}
+      </a>
+      <a *ngIf="itemv.elink" href="itemv.elink" target="_blank" rel="noopener">
+        {{ itemv.name }}
+      </a>
+    </div>
+  </div>
+</div>

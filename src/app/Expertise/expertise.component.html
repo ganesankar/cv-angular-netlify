@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row " *ngFor="let itemv of list | keyvalue; let i = index">
-    <div class="col-sm-12">
-      {{ itemv.key }}
+    <div class="col-sm-12 appBase">
+      <h4>{{ itemv.key }}</h4>
       <ol>
         <li *ngFor="let itemvx of itemv.value; let j = index">
-          {{ itemvx.name }}
+          <h5>{{ itemvx.name }}</h5>
           <mat-chip-list>
             <mat-chip
               color="primary"

@@ -10,18 +10,20 @@
 <div *ngFor="let item of list; let i = index" class="section" id="item.type">
   <div class="container">
   <div class="row">
-      <div class="col-12-12 col-3 col-left">
+      <div class="col-12-12 col-3 col-left appBase">
         <div [ngSwitch]="item.type">
           <div *ngSwitchCase="'intro'"></div>
           <div *ngSwitchCase="'contacts'">
-            <strong>Contact</strong><br/>
+            <h4>Contact</h4>
+              <p>Way to reach</p>
           </div>
           <div *ngSwitchCase="'social'">
-            <strong>social</strong><br/>
+            <h4> Social</h4>
+            <p>Kind of active</p>
           </div>
 
           <div *ngSwitchDefault>
-            <strong>{{ item.name }}</strong><br/>
+            <h4>{{ item.name }}</h4>
             <p>{{ item.desc }}</p>
           </div>
         </div>

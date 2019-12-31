@@ -1,29 +1,22 @@
 <div class="container-fluid">
-  <div class="row"  *ngFor="let itemv of item.values; let i = index">
-    <div class="col-12">
+  <div class="row" *ngFor="let itemv of item.values; let i = index">
+    <div class="col-12 appBase">
       <div class="el-divider">
         <div class="el-divider-right-text">
           <span *ngIf="itemv.startdate == 'c'"> Present</span>
           <span *ngIf="itemv.startdate != 'c'">
-            {{
-              itemv.startdate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY"
-            }}
+            {{ itemv.startdate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY"  }}
           </span>
-
           -
           <span *ngIf="itemv.enddate == 'c'"> Present</span>
           <span *ngIf="itemv.startdate != 'c'">
-            {{
-              itemv.enddate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY"
-            }}
+            {{ itemv.enddate | amParse: "DD/MM/YYYY" | amDateFormat: "MMM-YYYY" }}
           </span>
         </div>
       </div>
-      <strong>{{ itemv.name }}</strong><br/>
-      <span>{{ itemv.institute }}</span>
-      <p>
-        {{ itemv.desc }}
-      </p>
+      <h4>{{ itemv.name }}</h4>
+      <p>{{ itemv.institute }}</p>
+      <p> {{ itemv.desc }} </p>
     </div>
   </div>
 </div>

@@ -3,13 +3,8 @@
     {{ itemv.name }}
     <div class="el-divider">
       <div class="el-divider-left-text">
-        <a
-          *ngIf="itemv.elink"
-          href="itemv.elink"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ itemv.elink }}
+        <a *ngIf="itemv.portfolio" href="itemv.portfolio" target="_blank" rel="noopener">
+          {{ itemv.portfolio }}
         </a>
         <a *ngIf="itemv.link" href="itemv.link" target="_blank" rel="noopener">
           {{ itemv.link }}

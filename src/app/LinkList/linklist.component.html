@@ -6,7 +6,7 @@
         <a *ngIf="itemv.portfolio" href="itemv.portfolio" target="_blank" rel="noopener">
           {{ itemv.portfolio }}
         </a>
-        <a *ngIf="itemv.link" href="itemv.link" target="_blank" rel="noopener">
+        <a *ngIf="itemv.link && !itemv.portfolio" href="itemv.link" target="_blank" rel="noopener">
           {{ itemv.link }}
         </a>
       </div>

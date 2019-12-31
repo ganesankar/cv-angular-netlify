@@ -1,6 +1,6 @@
 <div class="container-fluid">
-  <div class="relative" *ngFor="let itemv of item.values; let i = index">
-    {{ itemv.name }}
+  <div class="relative appBase" *ngFor="let itemv of item.values; let i = index">
+   <h4> {{ itemv.name }}</h4>
     <div class="el-divider">
       <div class="el-divider-left-text">
         <a *ngIf="itemv.portfolio" href="itemv.portfolio" target="_blank" rel="noopener">

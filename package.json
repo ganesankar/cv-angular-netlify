@@ -1,6 +1,10 @@
 {
-  "name": "netlifyangular",
-  "version": "0.0.0",
+  "name": "cv-angular-netlify",
+   "version": "1.0.0",
+  "description": "React.js, bootstrap and FaunaDB based CV  for running Netlify functions locally in a dev environment and as a generated static site deployed to Netlify",
+  "author": "Ganesan Karuppaiya <ganesank@live.com>",
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

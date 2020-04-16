@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   users = [];
   list = [];
 
-  apiUrl = 'https://ganesan-cv-reactjs.netlify.com/.netlify/functions/cv-all';
+  apiUrl = 'https://ganesan-cv-reactjs.netlify.app/.netlify/functions/cv-all';
 
   GetData() {
     this.http.get<any[]>(this.apiUrl)
